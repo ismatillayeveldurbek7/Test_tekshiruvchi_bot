@@ -125,3 +125,18 @@ def get_all_exams():
     rows = cursor.fetchall()
     conn.close()
     return rows
+
+
+def get_all_results():
+    conn = sqlite3.connect(DATABASE_PATH)
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT r.id, r.user_id, u.full_name, u.username, r.exam_id, r.correct_count, r.wrong_count,
+               r.skipped_count, r.invalid_count, r.total_score, r.percentage, r.answers_detected, r.scanned_at
+        FROM results r
+        LEFT JOIN users u ON r.user_id = u.user_id
+        ORDER BY r.scanned_at DESC
+    """)
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
