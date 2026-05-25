@@ -6,7 +6,7 @@ def get_main_keyboard(is_admin: bool = False):
         [InlineKeyboardButton(text="📷 Test varaqasini tekshirish", callback_data="start_scanning")],
         [InlineKeyboardButton(text="📊 Mening natijalarim", callback_data="my_history"),
          InlineKeyboardButton(text="🏆 Reyting", callback_data="view_leaderboard")],
-        [InlineKeyboardButton(text="ℹ️ Qo‘llanma", callback_data="tutorial_info")],
+        [InlineKeyboardButton(text="ℹ️ Qo'llanma", callback_data="tutorial_info")]
     ]
     if is_admin:
         buttons.append([InlineKeyboardButton(text="⚙️ Admin panel", callback_data="admin_panel")])
@@ -16,8 +16,8 @@ def get_main_keyboard(is_admin: bool = False):
 def get_admin_keyboard():
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="🔑 Javob kalitini kiritish", callback_data="admin_set_keys")],
-        [InlineKeyboardButton(text="📜 Mavjud testlar", callback_data="admin_list_exams")],
-        [InlineKeyboardButton(text="🔙 Asosiy menyu", callback_data="back_to_main")],
+        [InlineKeyboardButton(text="📜 Kalitlar ro'yxati", callback_data="admin_list_exams")],
+        [InlineKeyboardButton(text="🔙 Asosiy menyu", callback_data="back_to_main")]
     ])
 
 
