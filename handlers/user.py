@@ -117,7 +117,8 @@ async def process_omr_uploaded_photo(msg: Message, state: FSMContext, bot: Bot):
             f"❌ Xato: {evaluation['wrong_count']}\n"
             f"⚪ Bo'sh: {evaluation['skipped_count']}\n"
             f"⚠️ 2 ta belgilangan: {evaluation['invalid_count']}\n"
-            f"📈 Foiz: {evaluation['percentage']}%\n\n"
+            f"📈 Foiz: {evaluation['percentage']}%\n"
+            f"🧭 Align: `{evaluation.get('align_method', '-')}`\n\n"
         )
 
         bad = [q for q in evaluation['questions'] if q['status'] != 'correct']

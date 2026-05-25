@@ -1,5 +1,5 @@
-aiogram>=3.4.1
-opencv-python-headless>=4.9.0.80
-numpy>=1.26.4
-Pillow>=10.2.0
-python-dotenv>=1.0.1
+aiogram==3.13.1
+opencv-python-headless
+numpy
+requests
+python-dotenv
