@@ -59,7 +59,7 @@ def add_user(user_id: int, username: str, full_name: str):
     conn.commit()
     conn.close()
 
-def save_answer_key(exam_id: string, keys: str, admin_id: int):
+def save_answer_key(exam_id: str, keys: str, admin_id: int):
     conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
     cursor.execute(
